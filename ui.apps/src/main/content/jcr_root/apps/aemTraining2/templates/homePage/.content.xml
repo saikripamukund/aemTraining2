@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jcr:root jcr:title="Homepage Template" ranking="{Long}100" allowedPaths="[/content(/.*)?]" jcr:primaryType="cq:Template" jcr:description="This is the Homepage Template" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0">
+
+<jcr:content jcr:primaryType="cq:PageContent" 
+			 sling:resourceType="aemTraining2/components/structure/homepage">
+		<title
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="aemTraining2/components/content/title"/>
+        <header
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="aemTraining2/components/content/header"/>
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/parsys">
+            <text
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="aemTraining2/components/content/text"
+                text="&lt;p>This is a content page&lt;/p>"
+                textIsRich="true"/>
+        </par>
+    </jcr:content>
+
+</jcr:root>
+
+
+        

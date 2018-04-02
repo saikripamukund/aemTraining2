@@ -1,0 +1,4 @@
+# mentions all the CSS resources of the ClientLib
+header.css
+title.css
+footer.css
