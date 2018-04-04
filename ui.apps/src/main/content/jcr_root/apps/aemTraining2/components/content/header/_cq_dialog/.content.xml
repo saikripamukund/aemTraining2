@@ -28,7 +28,7 @@
                         name="./buttonText"/>
                       <buttonPath
                       	jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
                         fieldLabel="Button Path"
                         name="./buttonPath"/>
                 </items>
