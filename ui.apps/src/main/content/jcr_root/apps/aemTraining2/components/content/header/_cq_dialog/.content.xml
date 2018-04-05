@@ -31,6 +31,16 @@
                         sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
                         fieldLabel="Button Path"
                         name="./buttonPath"/>
+                      <!--  backgroundImage
+                      	jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                        fieldLabel="Background Image"
+                        name="./background"/-->
+                      <backgroundImage
+                      	jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="Background Image"
+                        name="./background"/>
                 </items>
             </column>
         </items>
