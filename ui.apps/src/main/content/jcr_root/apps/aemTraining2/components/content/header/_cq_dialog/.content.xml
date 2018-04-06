@@ -49,12 +49,15 @@
 							<items jcr:primaryType="nt:unstructured">
 								<option1 
 									jcr:primaryType="nt:unstructured"
+									value="Left"
 									text="Left"/>
 								<option2 
 									jcr:primaryType="nt:unstructured" 
+									value="Right"
 									text="Right"/>
 								<option3 
 								jcr:primaryType="nt:unstructured" 
+								value="Center"
 								text="Center"/>
 							</items>
 					</alginment>
