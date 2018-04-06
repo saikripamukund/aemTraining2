@@ -1,37 +1,136 @@
-
+<!--WITH BG -->
 <div class="header" style="background-image: url(${properties.background @ context='styleString'})" data-sly-test="${properties.background}">
 
+ <!--RIGHT ALIGN-->
 
-    <div class="headerh1 id=myHeader" data-sly-test="${properties.text}">
-        <h2>${properties.text}</h2>
+
+     <div class="rightalign" data-sly-test="${properties.alignment == 'Right'}">
+
+
+        <div class="headerh1 id=myHeader" data-sly-test="${properties.text}">
+            <h2>${properties.text}</h2>
+         </div>
+        
+        <div class="subtext id=mysubtext" data-sly-test="${properties.subtext}">
+            <h3>${properties.subtext}</h3>
+         </div>
+        
+        <div data-sly-test="${properties.buttonText}">
+            <button class="button read"a href=${properties.buttonPath} target="_blank"><h3>${properties.buttonText}</h3></a></button>
+         </div>
+
      </div>
-    
-    <div class="subtext id=mysubtext" data-sly-test="${properties.subtext}">
-        <h3>${properties.subtext}</h3>
+
+<!--LEFT ALIGN-->
+
+
+     <div class="leftalign" data-sly-test="${properties.alignment == 'Left'}">
+
+
+        <div class="headerh1 id=myHeader" data-sly-test="${properties.text}">
+            <h2>${properties.text}</h2>
+         </div>
+        
+        <div class="subtext id=mysubtext" data-sly-test="${properties.subtext}">
+            <h3>${properties.subtext}</h3>
+         </div>
+        
+        <div data-sly-test="${properties.buttonText}">
+            <button class="button read"a href=${properties.buttonPath} target="_blank"><h3>${properties.buttonText}</h3></a></button>
+         </div>
+
      </div>
-    
-    <div  data-sly-test="${properties.buttonText}">
-        <button class="button read"a href=${properties.buttonPath} target="_blank"><h3>${properties.buttonText}</h3></a></button>
-    
+
+<!--CENTER ALIGN-->
+
+
+     <div class="centeralign" data-sly-test="${properties.alignment == 'Center'}">
+
+
+        <div class="headerh1 id=myHeader" data-sly-test="${properties.text}">
+            <h2>${properties.text}</h2>
+         </div>
+        
+        <div class="subtext id=mysubtext" data-sly-test="${properties.subtext}">
+            <h3>${properties.subtext}</h3>
+         </div>
+        
+        <div data-sly-test="${properties.buttonText}">
+            <button class="button read"a href=${properties.buttonPath} target="_blank"><h3>${properties.buttonText}</h3></a></button>
+         </div>
+
      </div>
+
+
 
 </div>
 
 
+
+
+
+<!-- NO BG -->
 <div class="header" style="background:black" data-sly-test="${!properties.background}">
 
 
    
-    <div class="headerh1 id=myHeader" data-sly-test="${properties.text}">
-        <h2>${properties.text}</h2>
+    <!--RIGHT ALIGN-->
+
+
+     <div class="rightalign" data-sly-test="${properties.alignment == 'Right'}">
+
+
+        <div class="headerh1 id=myHeader" data-sly-test="${properties.text}">
+            <h2>${properties.text}</h2>
+         </div>
+        
+        <div class="subtext id=mysubtext" data-sly-test="${properties.subtext}">
+            <h3>${properties.subtext}</h3>
+         </div>
+        
+        <div data-sly-test="${properties.buttonText}">
+            <button class="button read"a href=${properties.buttonPath} target="_blank"><h3>${properties.buttonText}</h3></a></button>
+         </div>
+
      </div>
-    
-    <div class="subtext id=mysubtext" data-sly-test="${properties.subtext}">
-        <h3>${properties.subtext}</h3>
+
+<!--LEFT ALIGN-->
+
+
+     <div class="leftalign" data-sly-test="${properties.alignment == 'Left'}">
+
+
+        <div class="headerh1 id=myHeader" data-sly-test="${properties.text}">
+            <h2>${properties.text}</h2>
+         </div>
+        
+        <div class="subtext id=mysubtext" data-sly-test="${properties.subtext}">
+            <h3>${properties.subtext}</h3>
+         </div>
+        
+        <div data-sly-test="${properties.buttonText}">
+            <button class="button read"a href=${properties.buttonPath} target="_blank"><h3>${properties.buttonText}</h3></a></button>
+         </div>
+
      </div>
-    
-    <div  data-sly-test="${properties.buttonText}">
-        <button class="button read"a href=${properties.buttonPath} target="_blank"><h3>${properties.buttonText}</h3></a></button>
+
+<!--CENTER ALIGN-->
+
+
+     <div class="centeralign" data-sly-test="${properties.alignment == 'Center'}">
+
+
+        <div class="headerh1 id=myHeader" data-sly-test="${properties.text}">
+            <h2>${properties.text}</h2>
+         </div>
+        
+        <div class="subtext id=mysubtext" data-sly-test="${properties.subtext}">
+            <h3>${properties.subtext}</h3>
+         </div>
+        
+        <div data-sly-test="${properties.buttonText}">
+            <button class="button read"a href=${properties.buttonPath} target="_blank"><h3>${properties.buttonText}</h3></a></button>
+         </div>
 
      </div>
 

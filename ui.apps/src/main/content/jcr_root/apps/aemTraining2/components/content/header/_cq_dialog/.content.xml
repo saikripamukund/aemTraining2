@@ -46,7 +46,6 @@
 						jcr:primaryType="nt:unstructured"
 						fieldLabel="Content Alignment"
 						name="./alignment">
-						
 							<items jcr:primaryType="nt:unstructured">
 								<option1 
 									jcr:primaryType="nt:unstructured"

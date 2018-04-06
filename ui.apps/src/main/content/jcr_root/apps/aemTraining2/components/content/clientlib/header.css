@@ -1,5 +1,15 @@
 /* Style the header */
 
+.leftalign{
+    text-align: left;
+    }
+.rightalign{
+    text-align: right;
+    margin-right: 50px;
+    }
+.centeralign{
+    text-align: center;
+    }
 .headerh1{
  	padding-left:50px;
     padding-bottom:75px;
