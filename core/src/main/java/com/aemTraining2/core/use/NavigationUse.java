@@ -1,18 +1,22 @@
 package com.aemTraining2.core.use;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.adobe.cq.sightly.WCMUsePojo;
 import com.day.cq.wcm.api.Page;
 
 public class NavigationUse extends WCMUsePojo {
 	
-	private List<String> children;
-
+	private List<String> children = new ArrayList<String>();
+	private String name;
+	Logger log = LoggerFactory.getLogger(NavigationUse.class); 
 	// The activate() method of a Use class automatically is called every time this component is rendered.  It's a method you can
 	// use to set stuff up, initialize variables, etc.
 	@Override
@@ -25,12 +29,16 @@ public class NavigationUse extends WCMUsePojo {
 		// You can also get this component instance as a Resource like this.  This Resource will be the actual node that is created
 		// when an author drags an instance of your navigation component onto a page (or if you programatically include one).
 		Resource resource = getResource();
+		name = "Kripa";
+		//log.error("Value Map " + resource.getValueMap());
 		
 		// Per the requirement of the project, where you need to display the direct children of the current page in the nav, you could
 		// do it a number of ways.  One is to do it in this Use class by havinig a local variable that holds the list of paths:
 		Iterator<Page> it = getCurrentPage().listChildren();
 		while(it.hasNext()) {
-			children.add(it.next().getPath());
+			Page current = it.next();
+			String path = current.getPath();
+			children.add(path);
 		}
 	}
 
@@ -41,5 +49,8 @@ public class NavigationUse extends WCMUsePojo {
 	// the data-sly-list block statement can loop over it for you.
 	public List<String> getChildren() {
 		return children;
+	}
+	public String getName() {
+		return name;
 	}
 }
