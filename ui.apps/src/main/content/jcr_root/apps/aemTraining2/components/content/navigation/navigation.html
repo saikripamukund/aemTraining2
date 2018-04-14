@@ -1,11 +1,9 @@
 <sly data-sly-use.navpath="com.aemTraining2.core.use.NavigationUse"/>
 
-<ul data-sly-list="${navpath.children}">
-        <li>
-            <div> ${item}</div>
-        </li>
-    </ul>
 
-<div class="navbar id=myNav" data-sly-test="${properties.rootPath}">
-	<a href=${properties.rootPath}><h3>Navigation Root Path</h3></a>
-</div>
+
+<ul class="navbar id=myNav" data-sly-list="${navpath.navItems}">
+            <a href=${item.path}><h3>${item.name}</h3></a>
+
+
+</ul>

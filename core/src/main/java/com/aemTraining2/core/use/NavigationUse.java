@@ -1,6 +1,9 @@
 package com.aemTraining2.core.use;
+import com.aemTraining2.core.models.NavItems;
 
 import java.util.ArrayList;
+
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
@@ -13,9 +16,9 @@ import com.adobe.cq.sightly.WCMUsePojo;
 import com.day.cq.wcm.api.Page;
 
 public class NavigationUse extends WCMUsePojo {
-	
-	private List<String> children = new ArrayList<String>();
-	private String name;
+	private ArrayList<NavItems> navitems = new ArrayList<NavItems>();
+	private List<String> childrenPath = new ArrayList<String>();
+	private ArrayList<String> pageName = new ArrayList<String>();
 	Logger log = LoggerFactory.getLogger(NavigationUse.class); 
 	// The activate() method of a Use class automatically is called every time this component is rendered.  It's a method you can
 	// use to set stuff up, initialize variables, etc.
@@ -29,7 +32,6 @@ public class NavigationUse extends WCMUsePojo {
 		// You can also get this component instance as a Resource like this.  This Resource will be the actual node that is created
 		// when an author drags an instance of your navigation component onto a page (or if you programatically include one).
 		Resource resource = getResource();
-		name = "Kripa";
 		//log.error("Value Map " + resource.getValueMap());
 		
 		// Per the requirement of the project, where you need to display the direct children of the current page in the nav, you could
@@ -38,7 +40,11 @@ public class NavigationUse extends WCMUsePojo {
 		while(it.hasNext()) {
 			Page current = it.next();
 			String path = current.getPath();
-			children.add(path);
+			String name = current.getTitle();
+			pageName.add(name);
+			childrenPath.add(path);
+			NavItems item = new NavItems(name, path);
+			navitems.add(item);
 		}
 	}
 
@@ -47,10 +53,13 @@ public class NavigationUse extends WCMUsePojo {
 	// remains.  In your HTML file, you can then reference the variable "children" directly from your Use class instance.  Make sure you include
 	// your Use class atop your HTML file with a data-sly-use block!  Since the children variable is iterable (implements the Iterable interface), 
 	// the data-sly-list block statement can loop over it for you.
-	public List<String> getChildren() {
-		return children;
+	public List<String> getChildrenPath() {
+		return childrenPath;
 	}
-	public String getName() {
-		return name;
+	public ArrayList<String> getPageName() {
+		return pageName;
+	}
+	public ArrayList<NavItems> getNavItems(){
+		return navitems;	
 	}
 }
