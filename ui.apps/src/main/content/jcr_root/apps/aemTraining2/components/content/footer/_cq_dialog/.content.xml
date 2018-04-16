@@ -16,9 +16,54 @@
                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                         fieldLabel="Text"
                         name="./text"/>
+                    <links
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                        composite="{Boolean}true"
+                        fieldLabel="Link">
+                        <field
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset"
+                            name="./url">
+                            <items jcr:primaryType="nt:unstructured">
+                                <urlPath
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                    fieldLabel="Link URL"
+                                    name="urlPath"/>
+                                <urlName
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="Link Name"
+                                    name="urlName"/>
+                            </items>
+                        </field>
+                    </links>
+                    <iconslinks
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                        composite="{Boolean}true"
+                        fieldLabel="Icon">
+                        <field
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset"
+                            name="./iconurl">
+                            <items jcr:primaryType="nt:unstructured">
+                                <iconPath
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                    fieldLabel="Icon"
+                                    name="iconPath"/>
+                                <iconName
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="Icon Name"
+                                    name="iconName"/>
+                            </items>
+                        </field>
+                    </iconslinks>
                 </items>
             </column>
         </items>
     </content>
 </jcr:root>
-
