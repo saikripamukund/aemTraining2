@@ -16,9 +16,9 @@ import com.adobe.cq.sightly.WCMUsePojo;
 import com.day.cq.wcm.api.Page;
 
 public class NavigationUse extends WCMUsePojo {
-	private ArrayList<NavItems> navitems = new ArrayList<NavItems>();
+	private List<NavItems> navitems = new ArrayList<NavItems>();
 	private List<String> childrenPath = new ArrayList<String>();
-	private ArrayList<String> pageName = new ArrayList<String>();
+	private List<String> pageName = new ArrayList<String>();
 	Logger log = LoggerFactory.getLogger(NavigationUse.class); 
 	// The activate() method of a Use class automatically is called every time this component is rendered.  It's a method you can
 	// use to set stuff up, initialize variables, etc.
@@ -56,10 +56,10 @@ public class NavigationUse extends WCMUsePojo {
 	public List<String> getChildrenPath() {
 		return childrenPath;
 	}
-	public ArrayList<String> getPageName() {
+	public List<String> getPageName() {
 		return pageName;
 	}
-	public ArrayList<NavItems> getNavItems(){
+	public List<NavItems> getNavItems(){
 		return navitems;	
 	}
 }
