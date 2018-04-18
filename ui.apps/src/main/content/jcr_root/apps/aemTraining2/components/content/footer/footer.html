@@ -1,8 +1,23 @@
 
+<sly data-sly-use.footermulti="com.aemTraining2.core.use.FooterMultiUse"/>
 
-<div class="footer id="myFooter" data-sly-test="${properties.text}">
-  	<h2>${properties.text}</h2>
- </div> 
-
+<footer class="footer-distributed">
 
 
+<ul class="footer-left id=myFooter" data-sly-list="${footermulti.valueMapLinkList}">
+
+<a class = "footer-links" href=${item.urlPath}><h4>${item.urlName}</h4></a>
+
+</ul>
+
+<ul class="footer-right id=myFooter" data-sly-list="${footermulti.valueMapIconList}">
+
+<a class = "footer-links" href=${item.iconPath}><img src=${item.iconName}</img></a>
+
+</ul>
+
+<div class = "footer-left" data-sly-test="${properties.text}">
+	<p>${properties.text}</p>
+</div>
+
+</footer>
