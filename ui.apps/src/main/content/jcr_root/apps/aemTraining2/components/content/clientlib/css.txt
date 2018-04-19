@@ -3,3 +3,4 @@ header.css
 title.css
 footer.css
 navbar.css
+card.css
