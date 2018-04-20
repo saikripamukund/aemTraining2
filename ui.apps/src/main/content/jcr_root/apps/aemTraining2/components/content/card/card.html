@@ -1,10 +1,34 @@
 <sly data-sly-use.cardmulti="com.aemTraining2.core.use.CardMultiUse"/>
+    <ul  data-sly-list="${cardmulti.valueMapContentList}">
 
-<ul  data-sly-list="${cardmulti.valueMapContentList}">
+		<sly  data-sly-test.bg="${item.bgColor}">
 
-	<h4>${item.title}</h4>
-	<h4>${item.subtext}</h4>
-	<h4>${item.link}</h4>
-	<h4>${item.bgColor}</h4>
+        <div class="card">
+			<div class="container" style= "background-color:${bg @ context='styleString'} ">
+                <div class="title">${item.title}</div>
+                <div class="subtitle">${item.subtext}</div>
+                <a href=${item.link} class="link">${item.linkTitle}</a>
+            </div>
 
-</ul>
+        </div>
+    	<hr>
+    	</sly>
+
+        <sly  data-sly-test.bg="${!item.bgColor}">
+        
+                <div class="card">
+                    <div class="container" style= "background-color:${bg @ context='styleString'} ">
+                        <div class="title">${item.title}</div>
+                        <div class="subtitle">${item.subtext}</div>
+                		<div class="link">${item.linkTitle}</div>
+                    </div>
+        
+                </div>
+                <hr>
+                </sly>
+
+    </ul>
+
+
+
+

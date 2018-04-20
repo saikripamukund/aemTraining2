@@ -33,10 +33,15 @@
                                     fieldLabel="Subtext"
                                     name="subtext"
                                     required="{Boolean}true"/>
-                                <link
+                                 <linkTitle
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="Link Title"
+                                    name="linkTitle"/>
+                                <linkPath
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                    fieldLabel="Link"
+                                    fieldLabel="Link Path"
                                     name="link"/>
                                 <background
                                     jcr:primaryType="nt:unstructured"
