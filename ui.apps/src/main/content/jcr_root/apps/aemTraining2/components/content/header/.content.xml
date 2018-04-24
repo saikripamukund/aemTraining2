@@ -3,4 +3,4 @@
     jcr:primaryType="cq:Component"
     jcr:title="Hero Banner"
     componentGroup="aemTraining2"
-    cq:noDecoration="{Boolean}true"/>
+ />

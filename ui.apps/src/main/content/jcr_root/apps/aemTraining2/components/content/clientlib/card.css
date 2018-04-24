@@ -43,6 +43,15 @@
     text-align:center;
     }
     
-.card.red{
+.cardView.blue{
+	background-color:blue;
+}
+.cardView.red{
 	background-color:red;
+}
+.cardView.green{
+	background-color:green;
+}
+.cardView.grey{
+	background-color:grey;
 }

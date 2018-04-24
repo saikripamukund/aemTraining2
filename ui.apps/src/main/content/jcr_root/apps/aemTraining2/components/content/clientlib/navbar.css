@@ -3,6 +3,9 @@
   overflow: hidden;
   background-color: #333;
 }
+.navbar.ul{
+	margin:0;
+}
 
 /* Navbar links */
 a {
