@@ -22,6 +22,8 @@
   font-family: 'Helvetica Neue', sans-serif; 
   font-size: 100;
   font-weight: bold;
+  background-repeat: no-repeat;
+  background-size: 100%;
   /*background-image:url("/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten/camp-fire.jpg")*/
 
 }

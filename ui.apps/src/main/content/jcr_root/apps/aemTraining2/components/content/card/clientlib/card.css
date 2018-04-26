@@ -5,7 +5,7 @@
     padding: 20px;
     background-color: #ba964a;
     margin: 50px;
-    display: inline-block;
+    display: inline-grid;
 }
 
 /* On mouse-over, add a deeper shadow */
