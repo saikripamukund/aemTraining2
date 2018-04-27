@@ -4,8 +4,9 @@
 	width: 100%;
 	text-align: left;
 	font: normal 16px sans-serif;
-	padding: 100px 50px;
+	padding: 50px 50px;
 	bottom: 0;
+
 	
 }
 
@@ -39,8 +40,17 @@ p{
 .footer-distributed .footer-right{
 	float: right;
 	margin-top: 6px;
-	display: inline-block;
+    display:inline-block;
 }
+
+.footer-distributed .footer-left{
+	display:inline-block;
+    width:300px;
+}
+footer-title p{
+	float:left;
+
+  }
 
 .footer-distributed .footer-right a{
 	display: inline-block;
