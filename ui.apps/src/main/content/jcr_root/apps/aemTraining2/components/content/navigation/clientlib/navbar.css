@@ -2,6 +2,7 @@
 .navbar {
   overflow: hidden;
   background-color: #333;
+  position: -webkit-sticky;
 }
 .navbar.ul{
 	margin:0;

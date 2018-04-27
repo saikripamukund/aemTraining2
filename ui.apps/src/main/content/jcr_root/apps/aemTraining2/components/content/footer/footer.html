@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 <sly data-sly-use.footermulti="com.aemTraining2.core.use.FooterMultiUse"/>
 
@@ -11,8 +13,9 @@
 </ul>
 
 <ul class="footer-right id=myFooter" data-sly-list="${footermulti.valueMapIconList}">
-
-<a class = "footer-links" href=${item.iconPath}><img src=${item.iconName}></img></a>
+<a href=${item.iconPath} class="footer-links">
+    <i class="fa fa-${item.iconName}"></i>
+</a>
 
 </ul>
 

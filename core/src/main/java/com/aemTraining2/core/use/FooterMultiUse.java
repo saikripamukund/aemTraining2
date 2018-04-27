@@ -20,8 +20,12 @@ public class FooterMultiUse extends WCMUsePojo {
 	ValueMap valueMap;
 	Resource multifieldLinks;
 	Resource multifieldIcons;
+	int numLinks=0;
+	int numIcons=0;
 	List<ValueMap> valueMapLinkList = new ArrayList<ValueMap>();
 	List<ValueMap> valueMapIconList = new ArrayList<ValueMap>();
+	List<ValueMap> emptyMapList = null;
+
 
 	// The activate() method of a Use class automatically is called every time this component is rendered.  It's a method you can
 	// use to set stuff up, initialize variables, etc.
@@ -38,6 +42,7 @@ public class FooterMultiUse extends WCMUsePojo {
 		Resource resource = getResource();
 		multifieldLinks = resource.getChild("url");
 		multifieldIcons = resource.getChild("iconurl");
+		
 
 		//for Iterator - use while loop
 		//for Iterable - use for loop
@@ -45,6 +50,11 @@ public class FooterMultiUse extends WCMUsePojo {
 		for (Resource r:it){
 			ValueMap list = r.getValueMap();
 			valueMapLinkList.add(list);
+			numLinks++;
+			if(numLinks==8){
+				break;
+			}
+
 			
 		}
 		Iterable<Resource> itIcon = multifieldIcons.getChildren();
@@ -52,6 +62,10 @@ public class FooterMultiUse extends WCMUsePojo {
 		for (Resource r:itIcon){
 			ValueMap list = r.getValueMap();
 			valueMapIconList.add(list);
+			numIcons++;	
+			if(numIcons==5){
+				break;
+			}
 			
 		}
 		
@@ -72,9 +86,15 @@ public class FooterMultiUse extends WCMUsePojo {
 	// your Use class atop your HTML file with a data-sly-use block!  Since the children variable is iterable (implements the Iterable interface), 
 	// the data-sly-list block statement can loop over it for you.
 	public List<ValueMap> getValueMapLinkList() {
+		if (numLinks<3){
+			return emptyMapList;
+		}
 		return valueMapLinkList;
 	}
 	public List<ValueMap> getValueMapIconList() {
+		if (numIcons<3){
+			return emptyMapList;
+		}
 		return valueMapIconList;
 	}
 	public Resource getChild(){

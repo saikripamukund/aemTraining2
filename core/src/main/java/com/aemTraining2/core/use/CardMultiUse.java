@@ -19,7 +19,10 @@ public class CardMultiUse extends WCMUsePojo {
 	Logger log = LoggerFactory.getLogger(NavigationUse.class); 
 	ValueMap valueMap;
 	Resource multifieldContent;
+	int numCards=0;
 	List<ValueMap> valueMapContentList = new ArrayList<ValueMap>();
+	List<ValueMap> emptyMapList = null;
+
 
 	// The activate() method of a Use class automatically is called every time this component is rendered.  It's a method you can
 	// use to set stuff up, initialize variables, etc.
@@ -42,7 +45,7 @@ public class CardMultiUse extends WCMUsePojo {
 		for (Resource r:it){
 			ValueMap list = r.getValueMap();
 			valueMapContentList.add(list);
-			
+			numCards++;
 		}
 		
 		
@@ -63,6 +66,9 @@ public class CardMultiUse extends WCMUsePojo {
 	// your Use class atop your HTML file with a data-sly-use block!  Since the children variable is iterable (implements the Iterable interface), 
 	// the data-sly-list block statement can loop over it for you.
 	public List<ValueMap> getValueMapContentList() {
+		if (numCards<4){
+			return emptyMapList;
+		}
 		return valueMapContentList;
 	}
 	

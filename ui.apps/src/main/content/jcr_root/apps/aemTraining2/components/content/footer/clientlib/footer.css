@@ -1,5 +1,5 @@
 .footer-distributed{
-	background-color: #292c2f;
+	background-color: #898060;
 	box-sizing: border-box;
 	width: 100%;
 	text-align: left;
@@ -10,8 +10,9 @@
 }
 
 
+
 p{
-	color:  #8f9296;
+	color:  black;
 	font-size: 14px;
 	margins: 0;
     position: absolute;
@@ -38,7 +39,7 @@ p{
 .footer-distributed .footer-right{
 	float: right;
 	margin-top: 6px;
-	max-width: 180px;
+	display: inline-block;
 }
 
 .footer-distributed .footer-right a{
